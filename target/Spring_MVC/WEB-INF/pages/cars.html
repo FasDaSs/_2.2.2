@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <table align="center" cellspacing="10">
+        <thead align="center">
+        <tr>
+            <th>№</th>
+            <th>Модель</th>
+            <th>Номер серии</th>
+            <th>Цвет</th>
+        </tr>
+        </thead>
+        <tbody align="center">
+        <tr th:each="car, iterator : ${cars}">
+            <td th:text="${iterator.index}+1"></td>
+            <td th:text="${car.getModel()}"></td>
+            <td th:text="${car.getSeries()}"></td>
+            <td th:text="${car.getColor()}"></td>
+        </tr>
+        </tbody>
+    </table>
+</body>
+</html>
